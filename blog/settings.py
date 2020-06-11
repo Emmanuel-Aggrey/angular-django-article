@@ -25,7 +25,7 @@ SECRET_KEY = 'aek=d9cpkm!072#geppvs1gsbauk6ob_&^9ccz*42yn%r-$!df'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['angular-django-article.herokuapp.com','127.0.0.1']
 
 
 # Application definition
