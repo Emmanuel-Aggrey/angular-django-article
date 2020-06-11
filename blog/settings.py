@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # 3rd party
     'rest_framework',
     'ckeditor',
+    'cloudinary_storage',
+    'cloudinary',
 
     # local
     'blogapp'
