@@ -1,10 +1,8 @@
-from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from rest_framework import generics
-from rest_framework.permissions import (IsAdminUser, IsAuthenticated,
-                                        IsAuthenticatedOrReadOnly)
+from rest_framework.permissions import (IsAuthenticatedOrReadOnly)
 
 from .models import Article
 from .serializers import ArticleSerializer
@@ -23,8 +21,7 @@ class ArticleApiView(generics.ListAPIView, generics.CreateAPIView,
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
     lookup_field = 'key'
-
-    # permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request, key=None):
 

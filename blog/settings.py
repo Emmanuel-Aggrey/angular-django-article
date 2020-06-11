@@ -172,7 +172,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
 LOGIN_REDIRECT_URL = 'articles'
-LOGOUT_REDIRECT_URL = 'articles'
+LOGOUT_REDIRECT_URL = 'home'
 
 
 
