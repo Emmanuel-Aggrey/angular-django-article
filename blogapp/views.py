@@ -47,3 +47,15 @@ class ArticleApiView(generics.ListAPIView, generics.CreateAPIView,
        
         return self.destroy(request, key)
 
+
+
+def error404(request, exception):
+    context = {
+        'date': 'IT LOOKS LIKE YOU\'R MISSING',
+    }
+    return render(request, 'error_pages/404.html', context)
+
+
+def error500(request):
+
+    return render(request, 'error_pages/500.html')

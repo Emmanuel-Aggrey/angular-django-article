@@ -17,6 +17,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls import  handler404,handler500
 from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
@@ -25,3 +26,6 @@ urlpatterns = [
     path('api/', include('rest_framework.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'blogapp.views.error404'
+handler500 = 'blogapp.views.error500'
