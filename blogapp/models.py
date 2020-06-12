@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 class Article(models.Model):
-    title = models.CharField(max_length=100, unique=True)
+    title = models.CharField(max_length=200, unique=True)
     key = models.SlugField('slug', editable=False)
     date = models.DateField(auto_now_add=True)
     content = models.TextField(blank=True, null=True)
